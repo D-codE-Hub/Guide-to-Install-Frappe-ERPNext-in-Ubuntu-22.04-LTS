@@ -45,7 +45,7 @@ A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/
 
     sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 
-add this to the my.cnf file
+add this to the 50-server.cnf file
 
     
      [server]
@@ -59,8 +59,6 @@ add this to the my.cnf file
      bind-address = 127.0.0.1
      query_cache_size = 16M
      log_error = /var/log/mysql/error.log
-     character-set-server = utf8mb4
-     collation-server = utf8mb4_general_ci
     
      [mysqld]
      innodb-file-format=barracuda
@@ -83,9 +81,10 @@ Now press (Ctrl-X) to exit
 
 ### STEP 9 install Node.js 14.X package
 
-    sudo apt-get install curl
-    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    sudo apt-get install -y nodejs
+    sudo apt install curl 
+    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+    source ~/.profile
+    nvm install 14.15.0  
 
 ### STEP 10  install Yarn
 

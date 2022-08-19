@@ -29,6 +29,18 @@ A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/
 ### STEP 4 Install virtualenv
     
     sudo apt-get install virtualenv
+    
+  CHECK PYTHON VERSION 
+  
+    python3 -V
+  
+  IF VERSION IS 3.8.X RUN
+  
+    sudo apt install python3.8-venv
+
+  IF VERSION IS 3.10.X RUN
+  
+     sudo apt install python3.10-venv
 
 ### STEP 5 Install MariaDB
 

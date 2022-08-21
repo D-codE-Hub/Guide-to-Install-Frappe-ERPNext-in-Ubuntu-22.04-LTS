@@ -1,5 +1,6 @@
 # Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS
-A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application
+A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application.
+You can watch the full video here for reference https://www.youtube.com/watch?v=59Zu-S5QXn0
 
 ### Pre-requisites 
 

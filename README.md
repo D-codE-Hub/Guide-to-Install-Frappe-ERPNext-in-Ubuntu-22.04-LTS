@@ -4,7 +4,7 @@ A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/
 ### Pre-requisites 
 
       Python 3.6+
-      Node.js 14+
+      Node.js 20+
       Redis 5                                       (caching and real time updates)
       MariaDB 10.3.x / Postgres 9.5.x               (to run database driven apps)
       yarn 1.12+                                    (js dependency manager)
@@ -91,12 +91,12 @@ Now press (Ctrl-X) to exit
     
     sudo apt-get install redis-server
 
-### STEP 9 install Node.js 14.X package
+### STEP 9 install Node.js 20.X package
 
     sudo apt install curl 
     curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
     source ~/.profile
-    nvm install 14.15.0  
+    nvm install 21.1.0  
 
 ### STEP 10  install Yarn
 
@@ -117,7 +117,8 @@ Now press (Ctrl-X) to exit
     
 ### STEP 13 initilise the frappe bench & install frappe latest version 
 
-    bench init frappe-bench 
+    bench init frappe-bench
+    # can be added with --frappe-branch, if you need to install a stable version like version-15,version-14, by default develop branch will be set.
     
     cd frappe-bench/
     bench start
@@ -130,9 +131,9 @@ Now press (Ctrl-X) to exit
 
 ### STEP 15 install ERPNext latest version in bench & site
 
-    bench get-app erpnext --branch version-13
+    bench get-app erpnext --branch version-15
     ###OR
-    bench get-app https://github.com/frappe/erpnext --branch version-13
+    bench get-app https://github.com/frappe/erpnext --branch version-15
 
     bench --site dcode.com install-app erpnext
     
